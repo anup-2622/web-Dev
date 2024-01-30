@@ -3,18 +3,39 @@ body{
     margin: 0;
 }
 .container{
-    width: 100vw;
-    height: 100vh;
-    background-color: #fff;
-    position: absolute;
+ height: 100vh;
+ width: 100vw;
+ display: flex;
+ justify-content: space-between;
+
+}
+.left{
+    border: 2px solid black;
+    width: 50vw;
+    /* height: 100vh; */
+}
+.right{
+    border: 2px solid black;
+    width: 40vw;
+    /* height: 100vh; */
 }
 .card{
-    position:relative;
+    /* position:relative; */
     height: 100vh;
-    width: 60vw;
-    background-color: hotpink;
+    /* text-align: center; */
+    width: 45vw;
+    background-color: #808080
+
 }
-.card>input{
-    padding: .2rem;
-    outline: none;
+.card::before{
+  
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -25px;
+    width: 50vw;
+    z-index:-1;
+    border-style: solid;
+    border-color:#808080 transparent transparent transparent;
+    border-width: 100vh 100px 0 32px;
 }
