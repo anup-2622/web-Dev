@@ -6,22 +6,38 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
 </head>
 <body>
-        <div class="card">
-            <div class="container">
-                <div class="left">
-
-                </div>
-                <div class="right">
+    <div class="card">
+        <div class="container">
+            <div class="left">
+                
+            </div>
+            <div class="right">
                     <div class="form">
-                        <input type="text" placeholder="name">
+                        <input type="password" id="pwd" placeholder="name">
+                        <button id="btn" onclick="warning()">show </button>
                         <p class=" text-3xl text-blue-300">hwllo </p>
                     </div>
                 </div>
             </div>
         </div>
+        
+    </body>
+    <script>
+        // pass.style.padding='10px'
+        var showpwd = document.getElementById('btn');
+        function warning(){
+            // pass.type='text';
+            var pass = document.getElementById('pwd');
+            if(pass.type === "text"){
+                pass.type='password';
+            }else{
 
-</body>
-</html>
+                pass.type='text';
+            }
+       
+        }
+    </script>
+    <script src="/Show-Password/script.js"></script>
+    </html>
