@@ -6,38 +6,53 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
 </head>
 <body>
-    <div class="card">
-        <div class="container">
-            <div class="left">
+    <div class="myContainer">
+        <div class=" flex wrap justify-between align-center items-center gap-4 w-screen h-screen">
+            <div class="left border w-1/2  h-2/3"></div>
+            <div class="right w-1/2 h-4/5 p-2">
+                <div class="flex border border-red-500 p-3 gap-2 rounded ">
+                    <label class="border border-blue-300 p-1 rounded-md cursor-pointer" for="loginTab"><input type="radio" class=""  checked name="loginsingin"  onclick="switchTab()" id="loginTab" >Login</label>
+                    <label class="border border-blue-300 p-1 rounded-md cursor-pointer" for="signTab"><input type="radio" name="loginsingin"  onclick="switchTab()" id="signTab">SignUp</label>
+                </div>
                 
-            </div>
-            <div class="right">
-                    <div class="form">
-                        <input type="password" id="pwd" placeholder="name">
-                        <button id="btn" onclick="warning()">show </button>
-                        <p class=" text-3xl text-blue-300">hwllo </p>
-                    </div>
+                <div id="login" class="flex border border-black rounded-md my-2" >
+                    <input type="text" placeholder="email" class="">
+                    <input type="password" placeholder="password">
+                    <button class="p-2 border rounded-md bg-green-400 hover:bg-green-300 text-white">Login</button>
+                </div>
+                <div id="signin">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="email">
+                    <input type="password" placeholder="password">
+                    <button class="p-2 border rounded-md bg-blue-300 text-white">sign UP</button>
+
                 </div>
             </div>
         </div>
-        
-    </body>
-    <script>
-        // pass.style.padding='10px'
-        var showpwd = document.getElementById('btn');
-        function warning(){
-            // pass.type='text';
-            var pass = document.getElementById('pwd');
-            if(pass.type === "text"){
-                pass.type='password';
-            }else{
-
-                pass.type='text';
-            }
-       
-        }
+    </div>
+    
+</body>
+<script>
+    // pass.style.padding='10px'
+    
     </script>
     <script src="/Show-Password/script.js"></script>
     </html>
+    <!-- <div class="form">
+        <input type="password" id="pwd" placeholder="name">
+        <button id="btn" onclick="showPassword()">show </button>
+      
+    </div> -->
