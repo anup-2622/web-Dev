@@ -1,7 +1,9 @@
 body{
     padding: 0;
     margin: 0;
+    background-color: rgba(153, 231, 153, 0.73);
 }
+
 
 .myContainer{
     height: 100vh;
