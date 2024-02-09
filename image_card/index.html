@@ -14,5 +14,28 @@
         <img src="./captured (4).jpg" alt="">
         <img src="./captured.jpg" alt="">
     </div>
+
+    <div class="" style="height: 300px ; width: 300px;">
+        <img src="" id="myimg" width="50%" alt="">
+    </div>
+
 </body>
+<script>
+    const mypic = document.getElementById('myimg');
+
+    const myReq = new Request('captured.jpg')
+    fetch(myReq)
+    .then((res)=>
+    {
+        if(!res.ok)
+        {
+            throw new Error(`http error ! status: ${res.status}`)
+        }
+        return res.blob()
+    })
+    .then((res)=>{
+        mypic.src= URL.createObjectURL(res);
+    })
+
+</script>
 </html>
