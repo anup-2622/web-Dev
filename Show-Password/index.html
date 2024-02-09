@@ -61,7 +61,7 @@
                         </div>  
                         <div class="pass p-2">
 
-                            <input type="password" placeholder="password" class="p-1 outline-none border border-red-300 rounded bg-gray-200 ">
+                            <input type="password" id="pwd" placeholder="password" class="p-1 outline-none border border-red-300 rounded bg-gray-200 "> <i class="fa-solid fa-eye" id="eye" onclick="showPassword()" class="eye"></i>
                         </div>
                         <span class="" style="font-size: .4rem;">Forget Password</span>
                         <div class="btn">
@@ -104,6 +104,22 @@
 <script>
     // pass.style.padding='10px'
     
+    function showPassword(){
+    var eye = document.getElementById('eye').style.color='red'
+    var pass = document.getElementById('pwd').style.padding='10px'
+    pass.type='text';
+    if(pass.type === "text"){
+        pass.type='password';
+        eye.className='fa-solid fa-eye';  
+    }
+    if(pass.type === 'password'){
+        
+        pass.type='text';
+        eye.className='fa-solid fa-eye-flash';  
+    }
+
+}
+
     </script>
     <script src="/Show-Password/script.js"></script>
     </html>

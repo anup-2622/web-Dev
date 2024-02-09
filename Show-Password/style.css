@@ -11,6 +11,14 @@ body{
     background-color: #808080
 
 }
+.pass {
+    position: relative;
+}
+ .eye{
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
 .myContainer::before{
     content: '';
     position: absolute;

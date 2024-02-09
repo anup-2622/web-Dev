@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div class="container">
+    <form action="">
+        <textarea name="" id="textArea" onkeypress="counter()"  cols="10" rows="15"></textarea>
+        <span id="letterCount"></span>
+    </form>
+</div>
+
+<script>
+    var text = document.getElementById("textArea");
+    var textcounter = document.getElementById('letterCount');
+    textcounter.innerText=200;
+   
+    function counter()
+    {
+        var letter = text.value;
+        // text.style.backgroundColor="red";
+        console.log(letter)
+    }
+</script>
+</body>
+</html>

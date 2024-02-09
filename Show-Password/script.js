@@ -1,14 +1,16 @@
-function showPassword(){
-    
-    var pass = document.getElementById('pwd');
-    if(pass.type === "text"){
-        pass.type='password';
-    }else{
+// function showPassword(){
+//     var eye = document.getElementById('eye').style.color='red'
+//     var pass = document.getElementById('pwd').style.padding='10px'
+//     if(pass.type == "text"){
+//         pass.type='password';
+//         eye.className='fa-solid fa-eye';  
+//     }else{
+        
+//         pass.type='text';
+//         eye.className='fa-solid fa-eye-flash';  
+//     }
 
-        pass.type='text';
-    }
-
-}
+// }
 
 
 
