@@ -10,21 +10,28 @@
 
 <div class="container">
     <form action="">
-        <textarea name="" id="textArea" onkeypress="counter()"  cols="10" rows="15"></textarea>
-        <span id="letterCount"></span>
+        <textarea name="" id="textArea"   cols="10" rows="15"></textarea>
+        <span id="letterCount"> remaing</span>
     </form>
 </div>
 
 <script>
     var text = document.getElementById("textArea");
     var textcounter = document.getElementById('letterCount');
-    textcounter.innerText=200;
+    var totaltext =  textcounter.innerText=200;
    
-    function counter()
+    window.addEventListener('keypress' , counter)
+
+
+    function counter(e)
     {
-        var letter = text.value;
-        // text.style.backgroundColor="red";
-        console.log(letter)
+        var myStr = text.value;
+        
+        var myCount = myStr.length;
+        textcounter.innerText= totaltext - myCount ;
+        // console.log(myCount)
+
+        
     }
 </script>
 </body>
